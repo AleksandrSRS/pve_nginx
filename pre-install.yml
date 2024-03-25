@@ -3,6 +3,8 @@
   become: yes
   hosts: deb12-test2
   become_method: sudo
+  vars:
+    nginx_user: www-data
 
   roles:
    - nginx
@@ -16,7 +18,7 @@
         ansible_os_family == "Debian"
       notify:
         - nginx systemd
-    
+
     - name: "Configure hostname"
       ansible.builtin.hostname:
         name: "pve01.exampsite.local"

@@ -1,0 +1,2 @@
+[deb12-test2]
+192.168.5.66 ansible_user=ganibal virtual_domain=pve.example.local
