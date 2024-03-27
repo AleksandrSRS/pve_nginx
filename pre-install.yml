@@ -6,18 +6,18 @@
   vars:
     nginx_user: www-data
 
-  roles:
-   - nginx
+  # roles:
+  #  - nginx
 
   tasks:
-    - name: Install Nginx Web Server on Debian Family
-      apt:
-        name=nginx
-        state=latest
-      when:
-        ansible_os_family == "Debian"
-      notify:
-        - nginx systemd
+    # - name: Install Nginx Web Server on Debian Family
+    #   apt:
+    #     name=nginx
+    #     state=latest
+    #   when:
+    #     ansible_os_family == "Debian"
+    #   notify:
+    #     - nginx systemd
 
     - name: "Configure hostname"
       ansible.builtin.hostname:
